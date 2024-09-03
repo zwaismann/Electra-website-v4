@@ -1,0 +1,148 @@
+.reps {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #ff00cc; */
+}
+
+.reps__header-wrapper {
+  width: 1000px;
+  text-align: center;
+  /* border: 1px solid #0099ff; */
+}
+
+.reps__header {
+  font-size: var(--size-xl);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--clr-light-orange);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: var(--size-base);
+}
+
+.reps__star-decoration {
+  height: 2rem;
+  object-fit: contain;
+  margin: 1rem auto;
+}
+
+.reps__column-wrapper {
+  display: flex;
+  flex-grow: 1;
+  gap: 40px;
+  text-align: center;
+  /* border: 1px solid #0099ff; */
+}
+
+.reps__column {
+  flex-grow: 1;
+  width: 22rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.reps__column.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation delay for each column */
+.reps__column:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.reps__column:nth-child(2) {
+  transition-delay: 0.6s;
+}
+
+.reps__region {
+  font-size: var(--size-xs);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--clr-light-orange);
+  font-weight: bold;
+  padding-bottom: var(--size-base);
+}
+
+.reps__name {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-xl);
+  font-weight: bold;
+  padding-bottom: var(--size-base);
+}
+
+.reps__company {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-base);
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: var(--size-base);
+}
+
+.reps__email {
+  font-size: var(--size-xs);
+  padding-bottom: var(--size-6xl);
+}
+
+.reps__email a {
+  color: var(--clr-main-text-white);
+  text-decoration: none;
+  font-size: var(--size-base);
+  font-style: italic;
+  transition: color 0.5s ease, text-decoration 0.5s ease;
+}
+
+.reps__email a:hover {
+  color: var(--clr-light-orange);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+  background: linear-gradient(to right, rgb(239, 150, 34), rgb(255, 78, 0));
+  position: absolute;
+  bottom: 0;
+  gap: 30px;
+}
+
+.footer__logo img {
+  max-height: 25px;
+  display: block;
+  margin-left: 50px;
+}
+
+.footer__socials {
+  padding-left: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.footer__social-media {
+  width: 30px;
+  transition: all 0.3s;
+}
+
+.footer__social-media:hover {
+  transform: scale(1.2);
+  filter: brightness(2);
+}
+
+.footer__pattern {
+  flex-grow: 1;
+  width: 65%;
+  height: 110px;
+  display: inline block;
+  background-image: url('/assets/images/Star_Pattern_White.png');
+  background-size: 800px;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-right: 10px;
+}

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Electra Filmworks is a production company specializing in commercials, music videos, and short films." />
+    <meta name="keywords" content="Electra Filmworks, production company, commercials, music videos, short films" />
+    <meta name="author" content="Electra Filmworks" />
+    <title>Electra Filmworks v4</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=montserrat@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header__main">
+        <a
+          href="#home"
+          class="logo header__link"
+          aria-label="Electra Filmworks Homepage"
+        >
+          <img
+            src="/assets/images/Electra_Orange.png"
+            alt="Electra Logo"
+            class="logo-image"
+          />
+        </a>
+        <button aria-label="Open main menu" id="menu-toggle">
+          <img
+            src="/assets/images/Bolt_Star_Orange.png"
+            alt="Main Navigation Menu Button"
+            class="menu-button"
+          />
+        </button>
+        <nav role="navigation" id="nav-menu">
+          <ul class="header__menu">
+            <li class="nav-item">
+              <a class="header__link" href="#home">Directors</a>
+            </li>
+            <li class="nav-item header__line" aria-hidden="true">|</li>
+            <li class="nav-item">
+              <a class="header__link" href="#about">About</a>
+            </li>
+            <li class="nav-item header__line" aria-hidden="true">|</li>
+            <li class="nav-item">
+              <a class="header__link" href="#reps">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- Home -->
+      <section id="home" class="home container section">
+        <div class="home__reel">
+          <img
+            class="bolt__img"
+            src="/assets/images/Bolt_Star_Orange_reel.png"
+            aria-label="Reel Bolt"
+          />
+          <video
+          class="bolt__video"
+          id="reel-video"
+          src=""
+          muted
+          loop
+          loading="lazy"
+          aria-label="Reel Bolt Video"
+          style="opacity: 0;" 
+        ></video>
+        </div>
+        <nav class="home__directors">
+          <h1 class="home__title">Directors</h1>
+          <a id="rollover-ld" href="pages/lorenzo-deguia.html" class="home__director-name">Lorenzo De Guia</a>
+          <a id="rollover-ag" href="pages/anthony-garth.html" class="home__director-name">Anthony Garth</a>
+          <a id="rollover-km" href="pages/kailee-mcgee.html" class="home__director-name">Kailee McGee</a>
+          <a id="rollover-bw" href="pages/ben-weinstein.html" class="home__director-name">Ben Weinstein</a>
+          <a id="rollover-zw" href="pages/zeev-waismann.html" class="home__director-name">Ze'ev Waismann</a>
+        </nav>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- Featured Work 01 -->
+      <section id="featured-work-01" class="featured-work container section">
+        <div class="video-section">
+          <h1 class="featured-projects">Featured Projects</h1>
+          <div class="video-container">
+            <img
+              id="featured-thumbnail-1"
+              class="video-thumbnail"
+              src="/assets/images/Ford_Bronco_DUST_IS_GOLD_thumbnail.png"
+              alt="Ford Bronco Thumbnail"
+              loading="lazy"
+              aria-label="Ford Bronco Thumbnail"
+              data-video-src="/assets/videos/zw_Ford_Bronco_DUST_IS_GOLD_60sec_web2.mp4"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <img
+            src="/assets/images/Solo_Star_Orange.png"
+            alt="Solo Star Orange"
+            loading="lazy"
+            aria-label="Solo Star Orange"
+          />
+          <div class="film-details">
+            <h2 class="director-name">Ze'ev Waismann</h2>
+            <h3 class="project-type">Commercial</h3>
+            <h4 class="project-name">Dust is Gold</h4>
+            <div class="more-link btn button">
+              <a href="pages/zeev-waismann.html" aria-label="More from Ze'ev"
+                >More from Ze'ev</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Modal for video playback -->
+        <div id="video-modal" class="modal">
+          <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <video id="modal-video" controls>
+              <!-- The video source will be set dynamically based on the clicked thumbnail -->
+            </video>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- Featured Work 02 -->
+      <section id="featured-work-02" class="featured-work container section">
+        <div class="video-section">
+          <h1 class="featured-projects">Featured Projects</h1>
+          <div class="video-container">
+            <img
+              id="featured-thumbnail-2"
+              class="video-thumbnail"
+              src="/assets/images/km_VRT_LETS_RIDE_BOI_30sec_thumbnail.png"
+              alt="VRT LETS RIDE BOI thumbnail"
+              loading="lazy"
+              aria-label="VRT LETS RIDE BOI thumbnail"
+              data-video-src="/assets/videos/km_VRT_LETS_RIDE_BOI_30sec_web.mp4"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <img
+            src="/assets/images/Solo_Star_Orange.png"
+            alt="Solo Star Orange"
+            loading="lazy"
+            aria-label="Solo Star Orange"
+          />
+          <div class="film-details">
+            <h2 class="director-name">Kailee McGee</h2>
+            <h3 class="project-type">Commercial</h3>
+            <h4 class="project-name">Let's Ride Boi</h4>
+            <div class="more-link btn button">
+              <a href="/pages/kailee-mcGee.html" aria-label="More from Kailee"
+                >More from Kailee</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Modal for video playback -->
+        <div id="video-modal" class="modal">
+          <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <video id="modal-video" controls>
+              <!-- The video source will be set dynamically based on the clicked thumbnail -->
+            </video>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- Featured Work 03 -->
+      <section id="featured-work-03" class="featured-work container section">
+        <div class="video-section">
+          <h1 class="featured-projects">Featured Projects</h1>
+          <div class="video-container">
+            <img
+              id="featured-thumbnail-3"
+              class="video-thumbnail"
+              src="/assets/images/ld_3m_SEE_ME_60sec_thumbnail.png"
+              alt="3M SEE ME thumbnail"
+              loading="lazy"
+              aria-label="3M SEE ME thumbnail"
+              data-video-src="/assets/videos/ld_3m_SEE_ME_60sec_web.mp4"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <img
+            src="/assets/images/Solo_Star_Orange.png"
+            alt="Solo Star Orange"
+            loading="lazy"
+            aria-label="Solo Star Orange"
+          />
+          <div class="film-details">
+            <h2 class="director-name">Lorenzo De Guia</h2>
+            <h3 class="project-type">Commercial</h3>
+            <h4 class="project-name">See Me</h4>
+            <div class="more-link btn button">
+              <a href="/pages/lorenzo-deGuia.html" aria-label="More from Lorenzo"
+                >More from Lorenzo</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Modal for video playback -->
+        <div id="video-modal" class="modal">
+          <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <video id="modal-video" controls>
+              <!-- The video source will be set dynamically based on the clicked thumbnail -->
+            </video>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- Featured Work 04 -->
+      <section id="featured-work-04" class="featured-work container section">
+        <div class="video-section">
+          <h1 class="featured-projects">Featured Projects</h1>
+          <div class="video-container">
+            <img
+              id="featured-thumbnail-4"
+              class="video-thumbnail"
+              src="/assets/images/ag_Ford_NFL_SUPER_FAN_90sec_thumbnail.png"
+              alt="Ford NFL SUPERFAN thumbnail"
+              loading="lazy"
+              aria-label="Ford NFL SUPERFAN thumbnail"
+              data-video-src="/assets/videos/zw_Ford_Bronco_DUST_IS_GOLD_60sec_web.mp4"
+            />
+          </div>
+        </div>
+        <div class="right-content">
+          <img
+            src="/assets/images/Solo_Star_Orange.png"
+            alt="Solo Star Orange"
+            loading="lazy"
+            aria-label="Solo Star Orange"
+          />
+          <div class="film-details">
+            <h2 class="director-name">Anthony Garth</h2>
+            <h3 class="project-type">Commercial</h3>
+            <h4 class="project-name">Superfan</h4>
+            <div class="more-link btn button">
+              <a href="/pages/anthony-garth.html" aria-label="More from Ze'ev"
+                >More from Anthony</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Modal for video playback -->
+        <div id="video-modal" class="modal">
+          <div class="modal-content">
+            <button class="close" aria-label="Close">&times;</button>
+            <video id="modal-video" controls>
+              <!-- The video source will be set dynamically based on the clicked thumbnail -->
+            </video>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about container section">
+        <div class="about__image-container">
+          <img
+            src="/assets/images/Bolt_Star_Orange.png"
+            alt="Electra Filmworks Logo"
+            class="about-image"
+          />
+        </div>
+          <div class="about__content">
+            <h1 class="about__title">Who We Are</h1>
+            <p class="about__text">
+              Electra Filmworks specializes in commercials, music videos, and
+              short films. We deliver high-quality content that connects with
+              audiences and brings your vision to life with precision. Our focus
+              is on excellence and exceeding expectations.
+            </p>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!-- Staff -->
+      <section id="staff" class="staff container section">
+        <h1 class="staff__header">
+          The Team
+        </h1>
+        <img
+          src="/assets/images/Solo_Star_White.png"
+          class="staff__star-decoration"
+          alt="Solo Star Red"
+          loading="lazy"
+          aria-label="Solo Star Red"
+        />
+        <div class="staff__wrapper">
+          <div class="zeev-waismann staff__member">
+            <h2 class="staff__title">Director | Founder</h2>
+            <p class="staff__name">Ze'ev Waismann</p>
+            <p class="staff__tel">+1 (323) 540-1127</p>
+            <p class="staff__email">
+              <a href="mailto:zeev@electrafilmworks.com"
+                >zeev@electrafilmworks.com</a
+              >
+            </p>
+            <a
+              href="https://www.linkedin.com/in/electra-filmworks-984b242a4/"
+              aria-label="LinkedIn"
+              >
+              <img class="staff_socials"
+                src="/assets/images/instagram_logo_white.png"
+                alt="Instagram Logo"
+              />
+            </a>
+          </div>
+          <div class="tristan-drew staff__member">
+            <h2 class="staff__title">Executive Producer | Founder</h2>
+            <p class="staff__name">Tristan Drew</p>
+            <p class="staff__tel">+1 (323) 864-5568</p>
+            <p class="staff__email">
+              <a href="mailto:tristan@electrafilmworks.com"
+                >tristan@electrafilmworks.com</a
+              >
+            </p>
+            <a
+              href="https://www.linkedin.com/in/electra-filmworks-984b242a4/"
+              aria-label="LinkedIn"
+              >
+              <img class="staff_socials"
+              src="/assets/images/linkedin_logo_white.png"
+              alt="LinkedIn Logo">
+            </a>
+          </div>
+          <div class="jose-alvarez staff__member">
+            <h2 class="staff__title">Executive Producer</h2>
+            <p class="staff__name">José A. Alvarez</p>
+            <p class="staff__tel">+1 (917) 549-3901</p>
+            <p class="staff__email">
+              <a href="mailto:jose@electrafilmworks.com"
+                >jose@electrafilmworks.com</a
+              >
+            </p>
+            <a
+              href="https://www.linkedin.com/in/electra-filmworks-984b242a4/"
+              aria-label="LinkedIn"
+              >
+              <img class="staff_socials"
+              src="/assets/images/linkedin_logo_white.png"
+              alt="LinkedIn Logo">
+            </a>
+          </div>
+        </div>
+        <!-- Scroll Down Icon -->
+        <div class="scroll-down-line-wrapper">
+          <lord-icon
+            class="scroll-down-line"
+            src="https://cdn.lordicon.com/ksmzzfxc.json"
+            trigger="loop"
+            stroke="bold"
+            state="loop-slide"
+            colors="primary:#ff4e00,secondary:#ef9622"
+            style="width: 40px; height: 40px"
+          >
+          </lord-icon>
+        </div>
+      </section>
+
+      <!--Reps-->
+      <section id="reps" class="reps section container">
+        <div class="reps__page-content">
+          <div class="reps__header-wrapper">
+            <h1 class="reps__header">Reps</h1>
+            <img
+              src="/assets/images/Solo_Star_White.png"
+              class="reps__star-decoration"
+              alt="Solo Star White"
+              loading="lazy"
+              aria-label="Solo Star Red"
+            />
+          </div>
+          <div class="reps__column-wrapper">
+            <div class="reps__column">
+              <div id="East-Coast" class="reps__info">
+                <h1 class="reps__region">East Coast</h1>
+                <p class="reps__name">Ilene Silberman</p>
+                <p class="reps__company">Silberman Productions</p>
+                <p class="reps__email">
+                  <a href="mailto:silbermanpro@gmail.com"
+                    >silbermanpro@gmail.com</a
+                  >
+                </p>
+              </div>
+              <div id="South" class="reps__info">
+                <h1 class="reps__region">South</h1>
+                <p class="reps__name">Jack Reed</p>
+                <p class="reps__company">Jack Reed Reps</p>
+                <p class="reps__email">
+                  <a href="mailto:jack@jackreedreps.com"
+                    >jack@jackreedreps.com</a
+                  >
+                </p>
+              </div>
+              <div id="West-Coast" class="reps__info">
+                <h1 class="reps__region">West Coast</h1>
+                <p class="reps__name">Lisa Schreiber Naber</p>
+                <p class="reps__company">Boardalicious</p>
+                <p class="reps__email">
+                  <a href="mailto:lisa@boardwalklausd.com"
+                    >lisa@boardwalklausd.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="reps__column">
+              <div id="Midwest" class="reps__info">
+                <h1 class="reps__region">Midwest</h1>
+                <p class="reps__name">Nathan Skillkorn</p>
+                <p class="reps__company">Heart Brains and Nerves</p>
+                <p class="reps__email">
+                  <a href="mailto:nathan@heartbrainsandnerves.com"
+                    >nathan@heartbrainsandnerves.com</a
+                  >
+                </p>
+              </div>
+              <div id="Music-Videos" class="reps__info">
+                <h1 class="reps__region">Music Videos</h1>
+                <p class="reps__name">Tommy Labuda</p>
+                <p class="reps__company">Labuda Reps</p>
+                <p class="reps__email">
+                  <a href="mailto:tommy@labudareps.com">tommy@labudareps.com</a>
+                </p>
+              </div>
+              <div id="Contact-Us" class="reps__info">
+                <h1 class="reps__region">Questions</h1>
+                <p class="reps__name">Contact Us</p>
+                <p class="reps__company">Electra Filmworks</p>
+                <p class="reps__email">
+                  <a href="mailto:info@electrafilmworks.com"
+                    >info@electrafilmworks.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer__logo">
+            <img src="/assets/images/Electra_White.png" alt="Electra Logo" />
+          </div>
+          <nav class="footer__socials">
+            <a
+              href="https://www.instagram.com/electrafilmworks/"
+              aria-label="Instagram"
+            >
+              <img class="footer__social-media"
+                src="/assets/images/instagram_logo_white.png"
+                alt="Instagram Logo"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/electra-filmworks-984b242a4/"
+              aria-label="LinkedIn"
+            >
+              <img class="footer__social-media"
+                src="/assets/images/linkedin_logo_white.png"
+                alt="LinkedIn Logo"
+              />
+            </a>
+          </nav>
+          <div class="footer__pattern"></div>
+        </footer>
+      </section>
+    </main>
+    
+    <!-- Scroll Indicators -->
+    <div class="scroll-indicators">
+      <div class="indicator active" data-target="#home"></div>
+      <div class="indicator" data-target="#featured-work-01"></div>
+      <div class="indicator" data-target="#featured-work-02"></div>
+      <div class="indicator" data-target="#featured-work-03"></div>
+      <div class="indicator" data-target="#featured-work-04"></div>
+      <div class="indicator" data-target="#about"></div>
+      <div class="indicator" data-target="#staff"></div>
+      <div class="indicator" data-target="#reps"></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/home.js"></script>
+  </body>
+</html>

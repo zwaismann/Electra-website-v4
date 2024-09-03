@@ -1,0 +1,155 @@
+.header {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.header__main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  left: 50%;
+  padding: 40px;
+  transform: translateX(-50%);
+  z-index: 1000;
+  position: fixed; /* Keep it fixed at the top */
+  /* border: 1px solid #0099ff; */
+}
+
+.logo-image {
+  height: 16px;
+  transition: all 0.3s ease;
+  margin-left: 40px;
+  /* border: 1px solid #0099ff; */
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.menu-button {
+  height: 50px;
+  cursor: pointer;
+  margin-right: 40px;
+  transition: all 0.3s ease;
+  display: block;
+  /* border: 1px solid #0099ff; */
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* NAV MENU */
+#nav-menu {
+  display: flex;
+  height: 34px;
+  opacity: 0;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  margin-right: 110px;
+  padding-right: 2rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: auto;
+  transition: all 0.3s;
+  /* border: 1px solid #0099ff; */
+}
+
+/* Show the menu and animate items on hover */
+#menu-toggle:hover + #nav-menu,
+#nav-menu:hover {
+  opacity: 1;
+}
+
+/* Animate the nav items and the lines together on hover */
+#menu-toggle:hover + #nav-menu .nav-item,
+#nav-menu:hover .nav-item {
+  animation: fadeIn 0.4s ease-in-out forwards; /* Animation duration */
+  opacity: 0; /* Ensure nav items are initially invisible */
+}
+
+/* Staggered animation delays */
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(1),
+#nav-menu:hover .nav-item:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(2),
+#nav-menu:hover .nav-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(3),
+#nav-menu:hover .nav-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(4),
+#nav-menu:hover .nav-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(5),
+#nav-menu:hover .nav-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+#menu-toggle:hover + #nav-menu .nav-item:nth-child(6),
+#nav-menu:hover .nav-item:nth-child(6) {
+  animation-delay: 0.2s;
+}
+
+/* Apply animation delay to the .header__sun button */
+/* #menu-toggle:hover + #nav-menu .nav-item:nth-child(7) .header__sun,
+#nav-menu:hover .nav-item:nth-child(7) .header__sun {
+  animation-delay: 0.1s;
+  animation: fadeIn 0.2s ease-in-out forwards;
+} */
+
+/* Keyframes for fadeIn animation with horizontal movement */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 2em;
+}
+
+.header__menu li {
+  margin: 0;
+}
+
+.header__link {
+  font-size: var(--size-xs);
+  color: var(--clr-main-text-white);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px; /* Ensures consistent spacing */
+  transition: color 0.3s;
+  text-transform: uppercase;
+}
+
+.header__link:hover {
+  color: var(--clr-light-orange);
+}
+
+.header__line {
+  color: var(--clr-light-orange);
+}
