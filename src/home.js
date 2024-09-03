@@ -39,50 +39,56 @@ document.addEventListener('DOMContentLoaded', function () {
   ]
   selectors.forEach(selector => observeElements(selector))
 
-  // ROLL OVER PLAY
-  const muxPlayer = document.getElementById('reel-video') // Assuming 'reel-video' is your Mux player element
+  const directorVideos = {
+    'rollover-km': 'rquHm85TsO3A2LlDNegc02VHNgjZ02ymU00x4duyIxah2A', // Updated playback ID
+    'rollover-bw': 'a1TEMiqsBMFoG8pcfiq9vK1oiPThJFLH01Plz1Tis7q8', // Updated playback ID
+  }
+
+  // Get the Mux player element from the HTML
+  const muxPlayer = document.getElementById('reel-video')
 
   if (!muxPlayer) {
     console.error('Mux player element not found')
     return
   }
 
-  // Mapping director links to their respective Mux playback IDs
-  const directorVideos = {
-    // 'rollover-ld': 'ld_home_reel_playback_id',
-    // 'rollover-ag': 'ag_home_reel_playback_id',
-    'rollover-km': 'rquHm85TsO3A2LlDNegc02VHNgjZ02ymU00x4duyIxah2A', // Updated playback ID
-    'rollover-bw': 'a1TEMiqsBMFoG8pcfiq9vK1oiPThJFLH01Plz1Tis7q8', // Updated playback ID
-    // 'rollover-zw': 'zw_home_reel_playback_id',
-  }
-
   // Play all videos on page load
   Object.keys(directorVideos).forEach(id => {
-    muxPlayer.setAttribute('playback-id', directorVideos[id]) // Set the Mux playback ID
-    muxPlayer.play().catch(error => {
+    const playbackId = directorVideos[id]
+    const newMuxPlayer = document.createElement('mux-player')
+
+    newMuxPlayer.setAttribute('playback-id', playbackId)
+    newMuxPlayer.setAttribute('muted', '')
+    newMuxPlayer.setAttribute('loop', '')
+    newMuxPlayer.setAttribute('autoplay', '')
+    newMuxPlayer.style.position = 'absolute'
+    newMuxPlayer.style.opacity = '0'
+    newMuxPlayer.style.transition = 'opacity 0.5s ease' // Add transition for opacity
+    newMuxPlayer.style.width = '100%' // Adjust width as needed
+    newMuxPlayer.style.height = '100%' // Adjust height as needed
+    newMuxPlayer.style.aspectRatio = '9 / 16'
+    newMuxPlayer.setAttribute('data-id', id)
+
+    muxPlayer.parentElement.appendChild(newMuxPlayer)
+
+    // Play the video
+    newMuxPlayer.play().catch(error => {
       console.error(`Error playing video for ${id}:`, error)
     })
-  })
 
-  // Add mouse enter and leave events to change opacity
-  Object.keys(directorVideos).forEach(id => {
-    const element = document.getElementById(id)
+    // Add mouse enter and leave events to control opacity with fade-in effect
+    const directorElement = document.getElementById(id)
+    if (directorElement) {
+      directorElement.addEventListener('mouseenter', () => {
+        newMuxPlayer.style.opacity = '1' // Fade in the video
+      })
 
-    if (!element) {
+      directorElement.addEventListener('mouseleave', () => {
+        newMuxPlayer.style.opacity = '0' // Fade out the video
+      })
+    } else {
       console.error(`Element with id ${id} not found`)
-      return
     }
-
-    element.addEventListener('mouseenter', () => {
-      console.log(`Hovering over ${id}`)
-      muxPlayer.setAttribute('playback-id', directorVideos[id]) // Ensure the correct video is playing
-      muxPlayer.style.opacity = '1'
-    })
-
-    element.addEventListener('mouseleave', () => {
-      console.log(`Stopped hovering over ${id}`)
-      muxPlayer.style.opacity = '0'
-    })
   })
 
   // Smooth scroll to section for Nav Menu links

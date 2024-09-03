@@ -27,6 +27,7 @@
             src="/assets/images/Electra_Orange.png"
             alt="Electra Logo"
             class="logo-image"
+            loading="eager"
           />
         </a>
         <button aria-label="Open main menu" id="menu-toggle">
@@ -62,16 +63,15 @@
             src="/assets/images/Bolt_Star_Orange_reel.png"
             aria-label="Reel Bolt"
           />
-          <!-- Replace <video> with <mux-player> -->
-          <mux-player
-            id="reel-video"
-            class="bolt__video"
-            muted
-            loop
-            autoplay
-            style="opacity: 1;"
-            aria-label="Reel Bolt Video"
-          ></mux-player>
+          <div class="bolt__video"></div>
+            <mux-player
+              id="reel-video"
+              loading="eager"
+              aspect-ratio="9:16" 
+              aria-label="Reel Bolt Video"
+              zindex="500"
+            ></mux-player>
+          </div>
         </div>
         <nav class="home__directors">
           <h1 class="home__title">Directors</h1>
@@ -94,6 +94,8 @@
           ></lord-icon>
         </div>
       </section>
+
+
       <!-- Featured Work 01 -->
       <section id="featured-work-01" class="featured-work container section">
         <div class="video-section">
@@ -114,7 +116,7 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
@@ -167,7 +169,7 @@
               class="video-thumbnail"
               src="/assets/images/km_VRT_LETS_RIDE_BOI_30sec_thumbnail.png"
               alt="VRT LETS RIDE BOI thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="VRT LETS RIDE BOI thumbnail"
               data-playback-id="w4Zj3eeapaSmgtdnrQ2deB375YJN8RuPFr01W01paVwXk"
             />
