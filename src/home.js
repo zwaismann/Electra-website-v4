@@ -40,22 +40,31 @@ document.addEventListener('DOMContentLoaded', function () {
   selectors.forEach(selector => observeElements(selector))
 
   // ROLL OVER PLAY
-  const video = document.getElementById('reel-video')
+  const muxPlayer = document.getElementById('reel-video') // Assuming 'reel-video' is your Mux player element
 
-  if (!video) {
-    console.error('Video element not found')
+  if (!muxPlayer) {
+    console.error('Mux player element not found')
     return
   }
 
-  // Mapping director links to their respective video sources
+  // Mapping director links to their respective Mux playback IDs
   const directorVideos = {
-    'rollover-ld': '/assets/videos/ld_home_reel.mp4',
-    'rollover-ag': '/assets/videos/ag_home_reel.mp4',
-    'rollover-km': '/assets/videos/km_home_reel.mp4',
-    'rollover-bw': '/assets/videos/bw_home_reel.mp4',
-    'rollover-zw': '/assets/videos/zw_home_reel.mp4',
+    // 'rollover-ld': 'ld_home_reel_playback_id',
+    // 'rollover-ag': 'ag_home_reel_playback_id',
+    'rollover-km': 'rquHm85TsO3A2LlDNegc02VHNgjZ02ymU00x4duyIxah2A', // Updated playback ID
+    'rollover-bw': 'a1TEMiqsBMFoG8pcfiq9vK1oiPThJFLH01Plz1Tis7q8', // Updated playback ID
+    // 'rollover-zw': 'zw_home_reel_playback_id',
   }
 
+  // Play all videos on page load
+  Object.keys(directorVideos).forEach(id => {
+    muxPlayer.setAttribute('playback-id', directorVideos[id]) // Set the Mux playback ID
+    muxPlayer.play().catch(error => {
+      console.error(`Error playing video for ${id}:`, error)
+    })
+  })
+
+  // Add mouse enter and leave events to change opacity
   Object.keys(directorVideos).forEach(id => {
     const element = document.getElementById(id)
 
@@ -66,18 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     element.addEventListener('mouseenter', () => {
       console.log(`Hovering over ${id}`)
-      video.src = directorVideos[id]
-      video.style.opacity = '1'
-      video.play().catch(error => {
-        console.error('Error playing video:', error)
-      })
+      muxPlayer.setAttribute('playback-id', directorVideos[id]) // Ensure the correct video is playing
+      muxPlayer.style.opacity = '1'
     })
 
     element.addEventListener('mouseleave', () => {
       console.log(`Stopped hovering over ${id}`)
-      video.style.opacity = '0'
-      video.pause()
-      video.currentTime = 0 // Reset the video to the start
+      muxPlayer.style.opacity = '0'
     })
   })
 

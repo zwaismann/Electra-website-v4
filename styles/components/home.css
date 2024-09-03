@@ -24,7 +24,7 @@
 .bolt__img,
 .bolt__video {
   position: absolute;
-  object-fit: contain;
+  /* object-fit: contain; */
   top: 50%; /* Move to the vertical center */
   left: 20%; /* Move to the horizontal center */
   transform: translate(-50%, -50%);

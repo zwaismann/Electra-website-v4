@@ -10,5 +10,10 @@
   },
   "devDependencies": {
     "vite": "^5.4.2"
+  },
+  "dependencies": {
+    "@mux/mux-node": "^8.8.0",
+    "@mux/mux-player": "^2.9.1",
+    "dotenv": "^16.4.5"
   }
 }

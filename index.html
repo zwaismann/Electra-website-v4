@@ -7,12 +7,13 @@
     <meta name="description" content="Electra Filmworks is a production company specializing in commercials, music videos, and short films." />
     <meta name="keywords" content="Electra Filmworks, production company, commercials, music videos, short films" />
     <meta name="author" content="Electra Filmworks" />
-    <title>Electra Filmworks v4</title>
+    <title>Electra Filmworks</title>
     <link
       href="https://api.fontshare.com/v2/css?f[]=montserrat@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
   </head>
   <body>
     <header class="header container">
@@ -61,16 +62,16 @@
             src="/assets/images/Bolt_Star_Orange_reel.png"
             aria-label="Reel Bolt"
           />
-          <video
-          class="bolt__video"
-          id="reel-video"
-          src=""
-          muted
-          loop
-          loading="lazy"
-          aria-label="Reel Bolt Video"
-          style="opacity: 0;" 
-        ></video>
+          <!-- Replace <video> with <mux-player> -->
+          <mux-player
+            id="reel-video"
+            class="bolt__video"
+            muted
+            loop
+            autoplay
+            style="opacity: 1;"
+            aria-label="Reel Bolt Video"
+          ></mux-player>
         </div>
         <nav class="home__directors">
           <h1 class="home__title">Directors</h1>
@@ -90,11 +91,9 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
-
       <!-- Featured Work 01 -->
       <section id="featured-work-01" class="featured-work container section">
         <div class="video-section">
@@ -106,8 +105,8 @@
               src="/assets/images/Ford_Bronco_DUST_IS_GOLD_thumbnail.png"
               alt="Ford Bronco Thumbnail"
               loading="lazy"
-              aria-label="Ford Bronco Thumbnail"
-              data-video-src="/assets/videos/zw_Ford_Bronco_DUST_IS_GOLD_60sec_web2.mp4"
+              aria-label="Ford Bronco thumbnail"
+              data-playback-id="XdvyCtxC01GgLyKOlSNmhitkhmZgk9L402S6DQPf7bonY"
             />
           </div>
         </div>
@@ -133,9 +132,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="XdvyCtxC01GgLyKOlSNmhitkhmZgk9L402S6DQPf7bonY"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Dust is Gold"
+              controls
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->
@@ -165,7 +169,7 @@
               alt="VRT LETS RIDE BOI thumbnail"
               loading="lazy"
               aria-label="VRT LETS RIDE BOI thumbnail"
-              data-video-src="/assets/videos/km_VRT_LETS_RIDE_BOI_30sec_web.mp4"
+              data-playback-id="w4Zj3eeapaSmgtdnrQ2deB375YJN8RuPFr01W01paVwXk"
             />
           </div>
         </div>
@@ -191,9 +195,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="w4Zj3eeapaSmgtdnrQ2deB375YJN8RuPFr01W01paVwXk"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Dust is Gold"
+              controls
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->
@@ -223,7 +232,7 @@
               alt="3M SEE ME thumbnail"
               loading="lazy"
               aria-label="3M SEE ME thumbnail"
-              data-video-src="/assets/videos/ld_3m_SEE_ME_60sec_web.mp4"
+              data-playback-id="mACdPBjc3T8h71wIIotEkstAQ5omVWgWCbbz101700drQ"
             />
           </div>
         </div>
@@ -249,9 +258,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="mACdPBjc3T8h71wIIotEkstAQ5omVWgWCbbz101700drQ"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Dust is Gold"
+              controls
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->
@@ -281,7 +295,7 @@
               alt="Ford NFL SUPERFAN thumbnail"
               loading="lazy"
               aria-label="Ford NFL SUPERFAN thumbnail"
-              data-video-src="/assets/videos/zw_Ford_Bronco_DUST_IS_GOLD_60sec_web.mp4"
+              data-playback-id="i01Ulqp4lofAUraM9fT6ApiuR9TTxzcVoqx27heCVZ1k"
             />
           </div>
         </div>
@@ -307,9 +321,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="i01Ulqp4lofAUraM9fT6ApiuR9TTxzcVoqx27heCVZ1k"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Dust is Gold"
+              controls
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->

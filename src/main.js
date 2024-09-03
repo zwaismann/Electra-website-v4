@@ -7,6 +7,7 @@ import '../styles/components/staff.css'
 import '../styles/components/reps.css'
 import '../styles/components/directors.css'
 import '../styles/utils.css'
+import '@mux/mux-player'
 
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.section')
@@ -124,6 +125,14 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  // Function to attempt video playback with error handling
+  function playVideoWithFallback(videoElement) {
+    videoElement.play().catch(error => {
+      console.error('Error trying to play video:', error)
+      // You could add additional fallback logic here, like showing a play button or a message to the user
+    })
+  }
+
   // Modal logic
   if (modal && modalVideo) {
     modal.style.display = 'none' // Hide modal initially
@@ -131,12 +140,20 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add click event to each thumbnail to trigger the modal
     thumbnails.forEach(thumbnail => {
       thumbnail.addEventListener('click', e => {
-        const videoSrc = e.target.getAttribute('data-video-src')
-        if (videoSrc) {
+        const playbackId = e.target.getAttribute('data-playback-id')
+        if (playbackId) {
           modal.style.display = 'flex' // Show the modal
-          modalVideo.src = videoSrc // Set the video source
-          modalVideo.load() // Load the video
-          modalVideo.play() // Play the video
+          modalVideo.setAttribute('playback-id', playbackId) // Set the Mux playback ID
+          modalVideo.load() // Ensure the video loads the new playback ID
+
+          // Wait for the video to load before attempting playback
+          modalVideo.addEventListener(
+            'loadeddata',
+            () => {
+              playVideoWithFallback(modalVideo) // Attempt to play the video
+            },
+            { once: true }
+          ) // Only trigger this event listener once
         }
       })
     })
@@ -145,17 +162,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModalFunction() {
       modal.style.display = 'none'
       modalVideo.pause() // Pause the video
-      modalVideo.currentTime = 0 // Reset video to the beginning
-      modalVideo.src = '' // Reset the video source
+      modalVideo.removeAttribute('playback-id') // Remove the playback ID
     }
 
     // Close modal when 'x' button is clicked
-    closeModal.addEventListener('click', closeModalFunction)
+    closeModal.addEventListener('click', () => {
+      closeModalFunction()
+      enableAutoplay() // Re-enable autoplay after the modal is closed
+    })
 
     // Close modal when clicking outside the video
     window.addEventListener('click', event => {
       if (event.target === modal) {
         closeModalFunction()
+        enableAutoplay()
       }
     })
 
@@ -163,7 +183,30 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('keydown', event => {
       if (event.key === 'Escape') {
         closeModalFunction()
+        enableAutoplay()
       }
     })
+  }
+
+  // Function to attempt video playback and handle errors
+  function playVideoWithFallback(videoElement) {
+    videoElement
+      .play()
+      .then(() => {
+        console.log('Autoplay started successfully')
+      })
+      .catch(error => {
+        console.error('Autoplay was blocked or failed:', error)
+        // Handle the error, for example, by showing a play button or updating the UI
+      })
+  }
+
+  // Function to re-enable autoplay
+  function enableAutoplay() {
+    setTimeout(() => {
+      modalVideo.removeAttribute('paused')
+      modalVideo.load() // Reload the video
+      playVideoWithFallback(modalVideo) // Attempt to re-enable autoplay
+    }, 100) // Small delay to ensure the modal has closed properly
   }
 })
