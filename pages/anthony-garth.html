@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="png" src="/assets/images/Bolt_Star_Orange.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Director Anthony Garth" />
     <meta name="author" content="Electra Filmworks" />
@@ -67,9 +67,9 @@
               class="video-thumbnail"
               src="/assets/images/ag_Ford_NFL_SUPER_FAN_90sec_thumbnail.png"
               alt="Ford NFL SUPERFAN thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="Ford NFL SUPERFAN thumbnail"
-              data-video-src="/assets/videos/ag_Ford_NFL_SUPER_FAN_90sec_web.mp4"
+              data-playback-id="i01Ulqp4lofAUraM9fT6ApiuR9TTxzcVoqx27heCVZ1k"
             />
           </div>
         </div>
@@ -77,7 +77,7 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
@@ -90,11 +90,18 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="i01Ulqp4lofAUraM9fT6ApiuR9TTxzcVoqx27heCVZ1k"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Superfan"
+              poster="/assets/images/ag_Ford_NFL_SUPER_FAN_90sec_thumbnail.png"
+              controls
+            ></mux-player>
           </div>
         </div>
+        <!-- Closing the modal-content div -->
         <!-- Scroll Down Icon -->
         <div class="scroll-down-line-wrapper">
           <lord-icon
@@ -105,8 +112,7 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
 
@@ -121,9 +127,9 @@
               class="video-thumbnail"
               src="/assets/images/ag_Corewell_Health_CAN_WE_30sec_thumbnail.png"
               alt="Corewell Health CAN WE thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="Corewell Health CAN WE thumbnail"
-              data-video-src="/assets/videos/ag_Corewell_Health_CAN_WE_30sec_web.mp4"
+              data-playback-id="LiIRyVKExSoXWBCzoYJ54ZVaTqBkTOCm83ntbgfAi5M"
             />
           </div>
         </div>
@@ -131,7 +137,7 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
@@ -144,11 +150,18 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="LiIRyVKExSoXWBCzoYJ54ZVaTqBkTOCm83ntbgfAi5M"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Can We"
+              poster="/assets/images/ag_Corewell_Health_CAN_WE_30sec_thumbnail.png"
+              controls
+            ></mux-player>
           </div>
         </div>
+        <!-- Closing the modal-content div -->
         <!-- Scroll Down Icon -->
         <div class="scroll-down-line-wrapper">
           <lord-icon
@@ -159,8 +172,7 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
 
@@ -175,9 +187,9 @@
               class="video-thumbnail"
               src="/assets/images/ag_Pure_Michigan_DETROIT_30sec_thumbnail.png"
               alt="McGraw Hill SHARPEN thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="McGraw Hill SHARPEN thumbnail"
-              data-video-src="/assets/videos/ag_Pure_Michigan_DETROIT_30sec_web.mp4"
+              data-playback-id="01Wj13irzW2QPCo9YbOtHqhDsuqc8kKRGoJRLAEImHaQ"
             />
           </div>
         </div>
@@ -185,24 +197,31 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
-            <h2 class="spot-name">Sharpen</h2>
+            <h2 class="spot-name">Detroit</h2>
             <h3 class="project-type">Commercial</h3>
-            <h4 class="client-name">McGraw Hill</h4>
+            <h4 class="client-name">Pure Michigan</h4>
           </div>
         </div>
         <!-- Modal for video playback -->
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="01Wj13irzW2QPCo9YbOtHqhDsuqc8kKRGoJRLAEImHaQ"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Detroit"
+              poster="/assets/images/ag_Pure_Michigan_DETROIT_30sec_thumbnail.png"
+              controls
+            ></mux-player>
           </div>
         </div>
+        <!-- Closing the modal-content div -->
         <!-- Scroll Down Icon -->
         <div class="scroll-down-line-wrapper">
           <lord-icon
@@ -213,8 +232,7 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
 
@@ -229,9 +247,9 @@
               class="video-thumbnail"
               src="/assets/images/ag_Lifebridge_Health_CARE_BRAVELY_60sec_thumbnail.png"
               alt="Lifebridge Health CARE BRAVELY thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="Lifebridge Health CARE BRAVELY thumbnail"
-              data-video-src="/assets/videos/ag_Lifebridge_Health_CARE_BRAVELY_60sec_web.mp4"
+              data-playback-id="SzYPQYx3JAiXvqyoqHtHww5eBXWmB9AGn8HqyACHGGk"
             />
           </div>
         </div>
@@ -239,11 +257,11 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
-            <h2 class="spot-name">Shopping Reinvented</h2>
+            <h2 class="spot-name">Care Bravely</h2>
             <h3 class="project-type">Commercial</h3>
             <h4 class="client-name">Lifebridge Health</h4>
           </div>
@@ -252,11 +270,18 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="SzYPQYx3JAiXvqyoqHtHww5eBXWmB9AGn8HqyACHGGk"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Care Bravely"
+              poster="/assets/images/ag_Lifebridge_Health_CARE_BRAVELY_60sec_thumbnail.png"
+              controls
+            ></mux-player>
           </div>
         </div>
+        <!-- Closing the modal-content div -->
         <!-- Scroll Down Icon -->
         <div class="scroll-down-line-wrapper">
           <lord-icon
@@ -267,8 +292,7 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
 
@@ -279,13 +303,13 @@
           <h2 class="directors__name2">Anthony Garth</h2>
           <div class="directors__video-container2">
             <img
-              id="featured-thumbnail-4"
+              id="featured-thumbnail-5"
               class="video-thumbnail"
               src="/assets/images/ag_Chevrolet_ARMY_NAVY_FAMILY_30sec_thumbnail.png"
               alt="Chevrolet ARMY NAVY FAMILY thumbnail"
-              loading="lazy"
+              loading="eager"
               aria-label="Chevrolet ARMY NAVY FAMILY thumbnail"
-              data-video-src="/assets/videos/ag_Chevrolet_ARMY_NAVY_FAMILY_30sec_web.mp4"
+              data-playback-id="w93yj2VEDM82SEgDC3fm2Rq5o5AMhRoTPYAPas63ros"
             />
           </div>
         </div>
@@ -293,7 +317,7 @@
           <img
             src="/assets/images/Solo_Star_Orange.png"
             alt="Solo Star Orange"
-            loading="lazy"
+            loading="eager"
             aria-label="Solo Star Orange"
           />
           <div class="film-details">
@@ -306,11 +330,18 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              playback-id="w93yj2VEDM82SEgDC3fm2Rq5o5AMhRoTPYAPas63ros"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Army Navy Family"
+              poster="/assets/images/ag_Chevrolet_ARMY_NAVY_FAMILY_30sec_thumbnail.png"
+              controls
+            ></mux-player>
           </div>
         </div>
+        <!-- Closing the modal-content div -->
         <!-- Scroll Down Icon -->
         <div class="scroll-down-line-wrapper">
           <lord-icon
@@ -321,8 +352,7 @@
             state="loop-slide"
             colors="primary:#ff4e00,secondary:#ef9622"
             style="width: 40px; height: 40px"
-          >
-          </lord-icon>
+          ></lord-icon>
         </div>
       </section>
 
@@ -372,9 +402,9 @@
               <img
                 id="director-image"
                 src="../assets/images/ag_bio_photo.png"
-                alt="Ben Weinstein"
+                alt="Anthony Garth"
                 loading="lazy"
-                aria-label="Ben Weinstein"
+                aria-label="Anthony Garth"
               />
             </div>
           </div>

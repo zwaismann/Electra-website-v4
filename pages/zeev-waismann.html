@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/Solo_Star_Orange.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Director Ze'ev Waismann" />
     <meta name="author" content="Electra Filmworks" />
@@ -68,8 +72,8 @@
               src="/assets/images/Ford_Bronco_DUST_IS_GOLD_thumbnail.png"
               alt="Ford DUST IS GOLD Thumbnail"
               loading="lazy"
-              aria-label="Ford DUST IS GOLD Thumbnail"
-              data-video-src="/assets/videos/zw_Ford_Bronco_DUST_IS_GOLD_60sec_web2.mp4"
+              aria-label="Ford Bronco thumbnail"
+              data-playback-id="XdvyCtxC01GgLyKOlSNmhitkhmZgk9L402S6DQPf7bonY"
             />
           </div>
         </div>
@@ -90,9 +94,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Dust is Gold"
+              controls
+              poster="/assets/images/Ford_Bronco_DUST_IS_GOLD_thumbnail.png"
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->
@@ -177,7 +186,7 @@
               alt="Geisinger WHAT MAKES US Thumbnail"
               loading="lazy"
               aria-label="Geisinger WHAT MAKES US Thumbnail"
-              data-video-src="/assets/videos/zw_Geisinger_WHAT_MAKES_US_60sec_web.mp4"
+              data-playback-id="7ZQehp7SlbrHBy4HT1J01d9fTfaD7e5BOGvmfgwLPgL4"
             />
           </div>
         </div>
@@ -198,9 +207,14 @@
         <div id="video-modal" class="modal">
           <div class="modal-content">
             <button class="close" aria-label="Close">&times;</button>
-            <video id="modal-video" controls>
-              <!-- The video source will be set dynamically based on the clicked thumbnail -->
-            </video>
+            <mux-player
+              id="modal-video"
+              accent-color="#ff4e00"
+              primary-color="#ef9622"
+              metadata-video-title="Geisinger WHAT MAKES US"
+              controls
+              poster="/assets/images/zw_Geisinger_WHAT_MAKES_US_60sec_thumbnail.png"
+            ></mux-player>
           </div>
         </div>
         <!-- Scroll Down Icon -->

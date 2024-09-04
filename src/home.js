@@ -40,8 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
   selectors.forEach(selector => observeElements(selector))
 
   const directorVideos = {
+    'rollover-ld': '28Uost7cn00fb68bWNsQNkv02Vr00KVh166008pI7n1hQSI', // Updated playback ID
+    'rollover-ag': 'r801XMYbB1jpCi7f02C7Y5xsOhRYdN201Fy96Oc9z8tauw', // Updated playback ID
     'rollover-km': 'rquHm85TsO3A2LlDNegc02VHNgjZ02ymU00x4duyIxah2A', // Updated playback ID
     'rollover-bw': 'a1TEMiqsBMFoG8pcfiq9vK1oiPThJFLH01Plz1Tis7q8', // Updated playback ID
+    'rollover-zw': 'jb3J01mwbm02Qa8Lmh53ShhzGSz02UeNtDLOh01J02FPyYD8', // Updated playback ID
   }
 
   // Get the Mux player element from the HTML
