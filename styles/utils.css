@@ -138,9 +138,9 @@ mux-player {
   /* --mute-button: none; */
   /* --captions-button: none; */
   /* --airplay-button: none; */
-  /* --pip-button: none; */
+  --pip-button: none;
   /* --fullscreen-button: none; */
-  /* --cast-button: none; */
+  --cast-button: none;
   --playback-rate-button: none;
   /* --volume-range: none; */
   /* --time-range: none; */

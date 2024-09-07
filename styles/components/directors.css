@@ -26,7 +26,7 @@
 
 .directors__title2 {
   font-size: var(--size-base);
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   width: 800px;
@@ -51,17 +51,6 @@
   /* border: 1px solid #0099ff; */
 }
 
-.film-type {
-  font-size: var(--size-sm);
-  margin-bottom: 20px;
-  text-align: left;
-  width: 100%;
-  padding-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-left: 50px;
-}
-
 .directors__video-container2 img {
   width: 800px;
   height: auto;
@@ -78,13 +67,14 @@
 .spot-name {
   font-size: var(--size-4xl);
   color: var(--clr-main-text-white);
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .client-name {
-  font-size: var(--size-2xl);
+  font-size: var(--size-sm);
   color: #fff;
-  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 /*Bio Section*/

@@ -84,7 +84,7 @@
 
 .reps__email {
   font-size: var(--size-xs);
-  padding-bottom: var(--size-6xl);
+  padding-bottom: var(--size-base);
 }
 
 .reps__email a {
@@ -97,6 +97,15 @@
 
 .reps__email a:hover {
   color: var(--clr-light-orange);
+}
+
+.reps__tel {
+  color: var(--clr-main-text-white);
+  font-size: var(--size-base);
+  letter-spacing: -0.02rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: var(--size-6xl);
 }
 
 /* Footer */

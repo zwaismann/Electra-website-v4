@@ -39,17 +39,6 @@
   /* border: 1px solid #0099ff; */
 }
 
-.film-type {
-  font-size: var(--size-sm);
-  margin-bottom: 20px;
-  text-align: left;
-  width: 100%;
-  padding-bottom: 50px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-left: 50px;
-}
-
 .video-container img {
   width: 100%;
   width: 800px;
@@ -67,25 +56,33 @@
 .director-name {
   font-size: var(--size-4xl);
   color: var(--clr-main-text-white);
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .project-type {
   font-size: var(--size-base);
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   color: var(--clr-dark-orange);
 }
 
-.project-name {
-  font-size: var(--size-xl);
+.project-client {
+  font-size: var(--size-sm);
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  padding-bottom: 0.5rem;
+}
+
+.project-name {
+  font-size: var(--size-2xl);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .more-link {
-  padding-top: 3rem;
+  padding-top: 4rem;
   font-size: var(--size-base);
 }
